@@ -8,6 +8,7 @@ import Services from './components/Services/Services';
 import CarList from './components/CarList/CarList';
 import Testimonial from './components/Testimonial/Testimonial';
 import AppStoreBanner from './components/AppStoreBanner/AppStoreBanner';
+import Contact from './components/Contact/Contact';
 
 
   const App=()=>{
@@ -55,6 +56,7 @@ import AppStoreBanner from './components/AppStoreBanner/AppStoreBanner';
       <CarList/>
       <Testimonial/>
       <AppStoreBanner/>
+      <Contact/>
     </div>
   );
 };
