@@ -4,6 +4,8 @@ import Hero from './components/Hero/Hero'
 import About from './components/About/About'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Services from './components/Services/Services';
+import CarList from './components/CarList/CarList';
 
 
   const App=()=>{
@@ -46,6 +48,8 @@ import "aos/dist/aos.css";
       <Navbar theme={theme} setTheme={setTheme}/>
       <Hero  theme={theme}/>
       <About/>
+      <Services/>
+      <CarList/>
     </div>
   );
 };
