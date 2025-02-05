@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 import Services from './components/Services/Services';
 import CarList from './components/CarList/CarList';
 import Testimonial from './components/Testimonial/Testimonial';
+import AppStoreBanner from './components/AppStoreBanner/AppStoreBanner';
 
 
   const App=()=>{
@@ -45,13 +46,15 @@ import Testimonial from './components/Testimonial/Testimonial';
 []);
 
   return (
-    <div>
+    <div className='bg-white dark:bg-dark dark:text-white
+    '>
       <Navbar theme={theme} setTheme={setTheme}/>
       <Hero  theme={theme}/>
       <About/>
       <Services/>
       <CarList/>
       <Testimonial/>
+      <AppStoreBanner/>
     </div>
   );
 };
