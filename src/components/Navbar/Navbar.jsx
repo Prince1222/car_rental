@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
+import ResponsiveMenu from "./../Navbar/ResponsiveMenu";
+import { HiMenuAlt1, HiMenuAlt3 } from 'react-icons/hi';
 
-const NavLinks = [
+ export const NavLinks = [
     {
         id: "1",
         name: "HOME",
@@ -26,11 +28,16 @@ const NavLinks = [
 
 
 const Navbar = ({ theme, setTheme }) => {
+   const [showMenu, setShowMenu] = useState(false);
 
+   const togglemenu = () =>{
+    setShowMenu(!showMenu);
+   };
     return (
-        <nav className='shadow-md bg-white dark:bg-gray-900 text-black dark:text-white transition duration-300'>
+        <nav className='shadow-md bg-white dark:bg-gray-900 text-black dark:text-white transition duration-300
+        relative z-40'>
 
-            <div className='container md:py-0'>
+            <div className='container py-3 md:py-0'>
                 <div className="flex
           justify-between items-center">
                     <div>
@@ -51,6 +58,7 @@ const Navbar = ({ theme, setTheme }) => {
 
                         </ul>
                     </div>
+                    {/* Dark Mode Icons */}
                     <div>
                         {
                             theme === "dark" ? (
@@ -63,9 +71,27 @@ const Navbar = ({ theme, setTheme }) => {
                                     className='text-2xl' />
                             )}
                     </div>
+                    {/* Mobil Hamburger menu */}
+                    {
+                        showMenu ? (
+                            <HiMenuAlt1
+                            onClick={togglemenu}  
+                          size={30}
+                          className='cursor pointer
+                          tranistion-all'
+                            />
+                        ):(
+                          <HiMenuAlt3 onClick={togglemenu}  
+                          size={30}
+                          className='cursor pointer
+                          tranistion-all'/>
+                        )
+                    }
+
 
                 </div>
             </div>
+            <ResponsiveMenu  showMenu={showMenu} />
         </nav>
     );
 }
