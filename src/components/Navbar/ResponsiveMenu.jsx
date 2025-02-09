@@ -8,7 +8,7 @@ const ResponsiveMenu = ({
 }) => {
   return (
     <div className={` ${showMenu ? "left-0":"-left-full"} fixed top-0 z-50 bg-white dark:bg-gray-900 h-screen w-[75%] md:hidden
-    rounded-r-xl shadow-md flex-col justify-between px-8 pb-6 pt-16 transition-all duration-300`}>
+    rounded-r-xl shadow-md  flex flex-col justify-between px-8 pb-6 pt-16 transition-all duration-300`}>
        <div className='card'>
         <div className='flex items-center justify-start gap-3'>
             <FaUserCircle size={50} />
@@ -31,6 +31,10 @@ const ResponsiveMenu = ({
         </nav>
 
        </div>
+         {/* Footer */}
+         <div>
+            <h1>Made with ❤️ by <a href="https://github.com/Prince1222/car_rental">Anik</a> </h1>
+         </div>
     </div>
   )
 }

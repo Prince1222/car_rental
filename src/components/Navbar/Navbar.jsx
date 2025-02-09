@@ -55,10 +55,7 @@ const Navbar = ({ theme, setTheme }) => {
                                             {data.name}</a>
                                     </li>
                                 ))}
-
-                        </ul>
-                    </div>
-                    {/* Dark Mode Icons */}
+                                          {/* Dark Mode Icons */}
                     <div>
                         {
                             theme === "dark" ? (
@@ -71,6 +68,12 @@ const Navbar = ({ theme, setTheme }) => {
                                     className='text-2xl' />
                             )}
                     </div>
+
+                        </ul>
+                    </div>
+                    <div className='flex items-center gap-4 md:hidden'>
+              
+
                     {/* Mobil Hamburger menu */}
                     {
                         showMenu ? (
@@ -90,6 +93,9 @@ const Navbar = ({ theme, setTheme }) => {
 
 
                 </div>
+
+                    </div>
+                    
             </div>
             <ResponsiveMenu  showMenu={showMenu} />
         </nav>
